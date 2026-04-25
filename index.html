@@ -265,27 +265,29 @@
 
   .finale-eyebrow {
     font-family: 'Italiana', serif;
-    font-size: clamp(0.85rem, 1.4vw, 1rem);
-    letter-spacing: 0.55em;
+    font-size: clamp(0.7rem, 1.4vw, 1rem);
+    letter-spacing: 0.4em;
     text-transform: uppercase;
     color: var(--gold);
     margin-bottom: 1.5rem;
-    text-indent: 0.55em;
+    text-indent: 0.4em;
     opacity: 0;
     animation: fadeIn 1.2s ease 1.2s forwards;
+    white-space: nowrap;
   }
 
   .finale-headline {
     font-family: 'Italiana', serif;
-    font-size: clamp(2.2rem, 6.5vw, 5rem);
+    font-size: clamp(2rem, 6.5vw, 5rem);
     color: var(--rose-deep);
     letter-spacing: 0.02em;
-    line-height: 1.1;
+    line-height: 1.15;
     margin-bottom: 2rem;
     opacity: 0;
     transform: translateY(30px);
     animation: revealUp 1.8s cubic-bezier(0.22, 1, 0.36, 1) 1.6s forwards;
     max-width: 900px;
+    white-space: nowrap;
   }
 
   .finale-headline em {
@@ -400,10 +402,27 @@
     .corner.tl, .corner.bl { left: 12px; }
     .corner.tr, .corner.br { right: 12px; }
     .scene { padding: 3rem 1rem 2rem; }
+    .finale { padding: 1.5rem 1rem; }
+    .finale-eyebrow {
+      font-size: 0.7rem;
+      letter-spacing: 0.3em;
+      text-indent: 0.3em;
+    }
+    .finale-headline {
+      font-size: 2.4rem;
+    }
+    .finale-message {
+      font-size: 1.15rem;
+      padding: 0 0.5rem;
+    }
+    .finale-signature {
+      font-size: 1rem;
+    }
   }
 </style>
 </head>
 <body>
+
 <svg class="corner tl" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <radialGradient id="cornerPetal" cx="40%" cy="35%">
@@ -412,9 +431,12 @@
       <stop offset="100%" stop-color="#7a1220"/>
     </radialGradient>
   </defs>
+
   <path d="M 60 95 Q 58 75 60 55" stroke="#5a7a4f" stroke-width="1.5" fill="none" opacity="0.7"/>
+
   <ellipse cx="50" cy="78" rx="10" ry="4" fill="#5a7a4f" opacity="0.7" transform="rotate(-30 50 78)"/>
   <ellipse cx="70" cy="68" rx="10" ry="4" fill="#5a7a4f" opacity="0.7" transform="rotate(30 70 68)"/>
+
   <g transform="translate(60 48)">
     <ellipse cx="-9" cy="2" rx="9" ry="12" fill="#7a1220" opacity="0.85" transform="rotate(-25)"/>
     <ellipse cx="9" cy="2" rx="9" ry="12" fill="#7a1220" opacity="0.85" transform="rotate(25)"/>
@@ -509,7 +531,7 @@
   <div class="finale-eyebrow">Four Years &nbsp;·&nbsp; Forever to Go</div>
   <h1 class="finale-headline">Happy 4 Years, <em>Mimi!</em></h1>
   <p class="finale-message">
-    I love you so much and feel so lucky to be able to call you my <strong>Wife</strong> <span class="heart">♥</span>
+    I love you so much and feel so lucky to be able to call you my <strong>wife</strong> <span class="heart">♥</span>
   </p>
   <div class="finale-signature">forever yours</div>
 </div>
@@ -543,7 +565,6 @@
         </g>
       `;
     } else if (s === 1) {
-
       inner += `
         <path d="M 160 372 Q 158 340 160 310" stroke="url(#stemGrad)" stroke-width="2.5" stroke-linecap="round" fill="none"/>
         <ellipse cx="148" cy="345" rx="11" ry="5" fill="url(#leafGrad)" transform="rotate(-25 148 345)"/>
@@ -571,13 +592,13 @@
         <ellipse cx="146" cy="280" rx="14" ry="6" fill="url(#leafGrad)" transform="rotate(-22 146 280)"/>
         <ellipse cx="178" cy="255" rx="14" ry="6" fill="url(#leafGrad)" transform="rotate(22 178 255)"/>
         <g class="new">
-          <!-- cute round bud -->
+
           <ellipse cx="160" cy="215" rx="16" ry="20" fill="url(#petalGrad)"/>
           <ellipse cx="158" cy="212" rx="11" ry="15" fill="url(#petalGradInner)"/>
           <ellipse cx="156" cy="210" rx="6" ry="9" fill="#a01a2a" opacity="0.7"/>
-          <!-- highlight -->
+
           <ellipse cx="153" cy="208" rx="2.5" ry="4" fill="#f5a3ad" opacity="0.6"/>
-          <!-- leafy calyx tips -->
+
           <path d="M 150 200 Q 154 195 158 200" stroke="#5a7a4f" stroke-width="1.5" fill="#5a7a4f"/>
           <path d="M 162 200 Q 166 195 170 200" stroke="#5a7a4f" stroke-width="1.5" fill="#5a7a4f"/>
         </g>
@@ -591,18 +612,18 @@
         <ellipse cx="180" cy="240" rx="16" ry="7" fill="url(#leafGrad)" transform="rotate(22 180 240)"/>
         <ellipse cx="150" cy="220" rx="12" ry="6" fill="url(#leafGrad)" transform="rotate(-18 150 220)"/>
         <g class="new">
-          <!-- partial bloom — opening petals around a center -->
+
           <g transform="translate(160 188)">
-            <!-- 4 outer opening petals -->
+
             <g transform="rotate(-50)"><ellipse cx="0" cy="-16" rx="13" ry="17" fill="url(#petalGrad)"/></g>
             <g transform="rotate(50)"><ellipse cx="0" cy="-16" rx="13" ry="17" fill="url(#petalGrad)"/></g>
             <g transform="rotate(-130)"><ellipse cx="0" cy="-14" rx="12" ry="15" fill="#7a1220"/></g>
             <g transform="rotate(130)"><ellipse cx="0" cy="-14" rx="12" ry="15" fill="#7a1220"/></g>
-            <!-- center bud still partly closed -->
+
             <ellipse cx="0" cy="-2" rx="13" ry="16" fill="url(#petalGradInner)"/>
             <ellipse cx="-2" cy="-4" rx="7" ry="11" fill="#a01a2a"/>
             <ellipse cx="0" cy="0" rx="3" ry="5" fill="#4a0810"/>
-            <!-- highlight -->
+
             <ellipse cx="-4" cy="-7" rx="2.5" ry="4" fill="#f5a3ad" opacity="0.6"/>
           </g>
         </g>
@@ -615,37 +636,37 @@
         <ellipse cx="140" cy="262" rx="18" ry="8" fill="url(#leafGrad)" transform="rotate(-22 140 262)"/>
         <ellipse cx="182" cy="232" rx="18" ry="8" fill="url(#leafGrad)" transform="rotate(22 182 232)"/>
         <ellipse cx="148" cy="208" rx="14" ry="6.5" fill="url(#leafGrad)" transform="rotate(-18 148 208)"/>
-        <!-- little leafy bracts under bloom -->
+
         <ellipse cx="145" cy="183" rx="9" ry="4" fill="#5a7a4f" transform="rotate(-30 145 183)"/>
         <ellipse cx="175" cy="183" rx="9" ry="4" fill="#5a7a4f" transform="rotate(30 175 183)"/>
         <g class="new">
-          <!-- cute full bloom — radial rounded petals -->
+
           <g transform="translate(160 155)">
-            <!-- outer ring: 6 plump petals -->
+
             <g transform="rotate(0)"><ellipse cx="0" cy="-32" rx="18" ry="24" fill="#a01a2a"/></g>
             <g transform="rotate(60)"><ellipse cx="0" cy="-32" rx="18" ry="24" fill="#a01a2a"/></g>
             <g transform="rotate(120)"><ellipse cx="0" cy="-32" rx="18" ry="24" fill="#a01a2a"/></g>
             <g transform="rotate(180)"><ellipse cx="0" cy="-32" rx="18" ry="24" fill="#a01a2a"/></g>
             <g transform="rotate(240)"><ellipse cx="0" cy="-32" rx="18" ry="24" fill="#a01a2a"/></g>
             <g transform="rotate(300)"><ellipse cx="0" cy="-32" rx="18" ry="24" fill="#a01a2a"/></g>
-            <!-- middle ring: 6 brighter petals offset by 30deg -->
+
             <g transform="rotate(30)"><ellipse cx="0" cy="-22" rx="14" ry="20" fill="url(#petalGrad)"/></g>
             <g transform="rotate(90)"><ellipse cx="0" cy="-22" rx="14" ry="20" fill="url(#petalGrad)"/></g>
             <g transform="rotate(150)"><ellipse cx="0" cy="-22" rx="14" ry="20" fill="url(#petalGrad)"/></g>
             <g transform="rotate(210)"><ellipse cx="0" cy="-22" rx="14" ry="20" fill="url(#petalGrad)"/></g>
             <g transform="rotate(270)"><ellipse cx="0" cy="-22" rx="14" ry="20" fill="url(#petalGrad)"/></g>
             <g transform="rotate(330)"><ellipse cx="0" cy="-22" rx="14" ry="20" fill="url(#petalGrad)"/></g>
-            <!-- inner ring: 5 small petals around center -->
+
             <g transform="rotate(0)"><ellipse cx="0" cy="-13" rx="10" ry="14" fill="url(#petalGradInner)"/></g>
             <g transform="rotate(72)"><ellipse cx="0" cy="-13" rx="10" ry="14" fill="url(#petalGradInner)"/></g>
             <g transform="rotate(144)"><ellipse cx="0" cy="-13" rx="10" ry="14" fill="url(#petalGradInner)"/></g>
             <g transform="rotate(216)"><ellipse cx="0" cy="-13" rx="10" ry="14" fill="url(#petalGradInner)"/></g>
             <g transform="rotate(288)"><ellipse cx="0" cy="-13" rx="10" ry="14" fill="url(#petalGradInner)"/></g>
-            <!-- center swirl -->
+
             <circle cx="0" cy="0" r="11" fill="#a01a2a"/>
             <circle cx="0" cy="0" r="8" fill="#7a1220"/>
             <path d="M -4 -2 Q 0 -6 4 -3 Q 6 1 3 4 Q -1 6 -4 3 Q -6 0 -4 -2 Z" fill="#4a0810"/>
-            <!-- cute highlights / blush -->
+
             <ellipse cx="-22" cy="-30" rx="5" ry="7" fill="#f5a3ad" opacity="0.55" transform="rotate(-30)"/>
             <ellipse cx="20" cy="-32" rx="4" ry="6" fill="#f5a3ad" opacity="0.55" transform="rotate(30)"/>
             <ellipse cx="-12" cy="-18" rx="2.5" ry="4" fill="#ffd3d8" opacity="0.6"/>
@@ -664,7 +685,6 @@
     });
   }
 
-  // Falling element generator
   function spawnFalling(emoji, count, options = {}) {
     const {
       duration = [4, 8],
@@ -755,7 +775,6 @@
     updatePips();
   }
 
-  // initial render
   drawStage(0);
   updatePips();
 
@@ -764,6 +783,7 @@
       stage++;
       drawStage(stage);
       updatePips();
+
       spawnFalling('❤', 2, { duration: [2.5, 4], size: [0.7, 1.4], delay: 80, opacity: [0.5, 0.9] });
 
       if (stage === 3) {
